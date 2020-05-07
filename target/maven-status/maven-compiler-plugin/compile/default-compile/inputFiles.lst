@@ -1,0 +1,14 @@
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/RecipeApplication.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/domain/Category.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/domain/Ingredient.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/domain/UnitOfMeasure.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/services/RecipeService.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/bootstrap/RecipeBootstrap.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/domain/Difficulty.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/services/RecipeServiceImpl.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/repositories/CategoryRepository.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/domain/Notes.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/domain/Recipe.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/repositories/UnitOfMeasureRepository.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/repositories/RecipeRepository.java
+/Users/iMac/IdeaProjects/recipe/src/main/java/guru/springframework/recipe/controllers/IndexController.java
