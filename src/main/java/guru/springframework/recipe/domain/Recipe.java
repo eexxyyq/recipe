@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+import static java.util.Objects.nonNull;
+
 @Data
 @Entity
 public class Recipe {
@@ -44,7 +46,9 @@ public class Recipe {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
-        notes.setRecipe(this);
+        if (nonNull(notes)) {
+            notes.setRecipe(this);
+        }
     }
 
     public void addIngredient(Ingredient ingredients) {
