@@ -1,5 +1,8 @@
 package guru.springframework.recipe.services;
 
+import guru.springframework.recipe.commands.RecipeCommand;
+import guru.springframework.recipe.converters.RecipeCommandToRecipe;
+import guru.springframework.recipe.converters.RecipeToRecipeCommand;
 import guru.springframework.recipe.domain.Recipe;
 import guru.springframework.recipe.repositories.RecipeRepository;
 import lombok.AllArgsConstructor;
@@ -15,6 +18,8 @@ import java.util.Set;
 @Slf4j
 public class RecipeServiceImpl implements RecipeService{
     private final RecipeRepository recipeRepository;
+    private final RecipeCommandToRecipe recipeCommandToRecipe;
+    private final RecipeToRecipeCommand recipeToRecipeCommand;
 
     @Override
     public Set<Recipe> getAllRecipes() {
@@ -30,5 +35,13 @@ public class RecipeServiceImpl implements RecipeService{
             throw new RuntimeException("This is wrong id");
         }
         return recipeOptional.get();
+    }
+
+    @Override
+    public RecipeCommand saveRecipeCommand(RecipeCommand recipeCommand) {
+        Recipe detachedRecipe = recipeCommandToRecipe.convert(recipeCommand);
+        Recipe savedRecipe = recipeRepository.save(detachedRecipe);
+        log.debug("Saved recipe id: " + savedRecipe.getId());
+        return recipeToRecipeCommand.convert(savedRecipe);
     }
 }
